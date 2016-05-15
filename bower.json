@@ -1,0 +1,33 @@
+{
+  "name": "angular-dynamic-title",
+  "description": "AngularJS directive to dynamically change page title using angular-ui-router.",
+  "main": "dist/angular-dynamic-title.js",
+  "authors": [
+    "afei"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "next",
+    "document",
+    "dynamic",
+    "title",
+    "angular",
+    "ui-router",
+    "title"
+  ],
+  "homepage": "https://github.com/afeiship/angular-dynamic-title",
+  "moduleType": [
+    "amd"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "src"
+  ],
+  "dependencies": {
+    "angular": "^1.5.5"
+  }
+}

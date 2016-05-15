@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="TestApp">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+  <meta content="telephone=no" name="format-detection"/>
+  <link rel="stylesheet" type="text/css" href="../dist/css/loading.css"/>
+  <style type="text/css">
+
+    body {
+      font-size:62.5%;
+      font-family: 'STHeiti', 'Microsoft YaHei', Helvetica, Arial, sans-serif;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+    }
+
+    /*Custom css*/
+    .myLoading > .loading-text {
+      color: #f00;
+      font-size: 14px;
+    }
+
+    .myLoading >.loading-icon[data-icon='clock']{
+      background-image: url(../src/svg/clock.svg);
+    }
+  </style>
+</head>
+<body ng-controller="MainCtrl">
+<button style="width:100%;background: #eee;padding:20px;" ng-click="show()">Show Loading</button>
+<button style="width:100%;background: #eee;padding:20px;" ng-click="hide()">Hide Loading</button>
+
+<script type="text/javascript" src="../bower_components/angular/angular.js"></script>
+<script type="text/javascript" src="../dist/js/angular-loading.js"></script>
+<script type="text/javascript">
+  var TestModule = angular.module('TestApp', ['nx.widget'])
+    .config(function (loadingProvider) {
+      loadingProvider.setOptions({
+        icon: 'ring',
+//        cssClass: 'myLoading',
+//        loadingText: 'loading...'
+      });
+    })
+    .controller('MainCtrl', function ($scope, nxLoading) {
+      $scope.show = function () {
+        /*Show method will override the provider config*/
+        nxLoading.show({
+          visible: true,
+//          loadingText: 'tsll....'
+        });
+      };
+      $scope.hide = function () {
+        /*Hide method only toggle the visibility of loading widget.*/
+        nxLoading.visible(false);
+      };
+    });
+</script>
+</body>
+</html>
