@@ -3,7 +3,7 @@ AngularJS directive to dynamically change page title using angular-ui-router.
 
 
 ##usage:
-+ bower install afeiship/angular-dynamic-title
++ `bower install afeiship/angular-dynamic-title`
 + html part:
 ```html
 <title dynamic-title>Title</title>
