@@ -44,6 +44,6 @@ var TestModule = angular.module('TestApp', ['ui.router','nx.widget'])
 ```
 
 
-##resource:
+##resources:
 + http://stackoverflow.com/questions/23813599/set-page-title-using-ui-router
 + http://stackoverflow.com/questions/20183222/updating-title-tag-using-angularjs-and-ui-router
