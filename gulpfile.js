@@ -26,7 +26,7 @@ gulp.task('clean', function () {
 
 gulp.task('scripts', function () {
   return gulp.src(scripts)
-    .pipe(concat('dynamic-title.js'))
+    .pipe(concat('angular-dynamic-title.js'))
     .pipe(gulp.dest('dist/js'))
     .pipe(uglify())
     .pipe(rename({
