@@ -6,7 +6,7 @@
 })();
 
 (function () {
-  'use strict';
+  //'use strict';
 
   angular.module('nx.widget')
     .directive('dynamicTitle', dynamicTitle);
@@ -23,7 +23,8 @@
           if (toState.data && toState.data.pageTitle) title = toState.data.pageTitle;
 
           $timeout(function () {
-            element.text(title);
+            //element.text(title);
+            changeTitle(title);
           }, 0, false);
         };
 
@@ -31,5 +32,26 @@
       }
     };
   }
+
+
+  function changeTitle(title) {
+    var body = document.getElementsByTagName('body')[0];
+    document.title = title;
+    var iframe = document.createElement("iframe");
+    iframe.setAttribute("src", "favicon.ico");
+    iframe.style.visibility='hidden';
+    iframe.style.position='absolute';
+    iframe.style.zIndex=-1;
+
+    iframe.addEventListener('load', function () {
+      setTimeout(function () {
+        iframe.removeEventListener('load',arguments.callee);
+        document.body.removeChild(iframe);
+      }, 0);
+    });
+
+    document.body.appendChild(iframe);
+  }
+
 
 })();

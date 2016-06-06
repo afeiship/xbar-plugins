@@ -14,16 +14,16 @@
     }
   </style>
 </head>
-<body ng-controller="MainCtrl">
+<body ng-controller="MainCtrl" style="padding:50px;">
 
-<a href="javascript:;" ui-sref="state1">State1 page</a>
+<a href="javascript:;" ui-sref="state1" style="margin-right: 30px;">State1 page</a>
 <a href="javascript:;" ui-sref="state2">State2 page</a>
 
 <div class="test-view" ui-view></div>
 <script type="text/javascript" src="../bower_components/angular/angular.js"></script>
 <script type="text/javascript" src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
 <script type="text/javascript" src="../bower_components/angular-module-stiffener/dist/angular-module-stiffener.js"></script>
-<script type="text/javascript" src="../dist/js/angular-dynamic-title.js"></script>
+<script type="text/javascript" src="../dist/js/angular-dynamic-title.js?x=123"></script>
 <script type="text/javascript">
   var TestModule = angular.module('TestApp', ['ui.router','nx.widget'])
     .config(function ($stateProvider, $urlRouterProvider) {
