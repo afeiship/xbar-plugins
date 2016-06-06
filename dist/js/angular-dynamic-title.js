@@ -24,6 +24,8 @@
 
           $timeout(function () {
             //element.text(title);
+
+            //todo:hook for wechat:
             changeTitle(title);
           }, 0, false);
         };
@@ -39,16 +41,18 @@
     document.title = title;
     var iframe = document.createElement("iframe");
     iframe.setAttribute("src", "favicon.ico");
-    iframe.style.visibility='hidden';
-    iframe.style.position='absolute';
-    iframe.style.zIndex=-1;
+    iframe.style.visibility = 'hidden';
+    iframe.style.position = 'absolute';
+    iframe.style.zIndex = -1;
 
-    iframe.addEventListener('load', function () {
+    iframe.addEventListener('load', __loadFn);
+
+    function __loadFn() {
       setTimeout(function () {
-        iframe.removeEventListener('load',arguments.callee);
+        iframe.removeEventListener('load', __loadFn);
         document.body.removeChild(iframe);
       }, 0);
-    });
+    }
 
     document.body.appendChild(iframe);
   }
