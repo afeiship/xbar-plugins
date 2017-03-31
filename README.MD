@@ -1,8 +1,8 @@
-#angular-dynamic-title
+# angular-dynamic-title
 AngularJS directive to dynamically change page title using angular-ui-router.
 
 
-##usage:
+## Usage:
 + bower install `afeiship/angular-dynamic-title`
 + html part:
 ```html
@@ -44,6 +44,6 @@ var TestModule = angular.module('TestApp', ['ui.router','nx.widget'])
 ```
 
 
-##resources:
+## Resources:
 + http://stackoverflow.com/questions/23813599/set-page-title-using-ui-router
 + http://stackoverflow.com/questions/20183222/updating-title-tag-using-angularjs-and-ui-router
