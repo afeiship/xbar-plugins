@@ -1,2 +1,0 @@
-# xbar-plugins
-> Xbar plugins.
