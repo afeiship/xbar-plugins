@@ -1,25 +1,14 @@
 {
-  "name": "angular-dynamic-title",
-  "version": "0.0.0",
-  "description": "AngularJS directive to dynamically change page title using angular-ui-router.",
-  "homepage": "https://github.com/afeiship/angular-dynamic-title",
+  "name": "@jswork/xbar-plugins",
+  "version": "1.0.0",
+  "description": "Xbar plugins.",
+  "homepage": "https://github.com/afeiship/xbar-plugins",
   "author": {
-    "name": "afei",
+    "name": "afeiship",
     "email": "1290657123@qq.com"
   },
   "license": "MIT",
-  "devDependencies": {
-    "del": "~2.0.2",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "~3.0.2",
-    "gulp-concat": "^2.6.0",
-    "gulp-debug": "^2.1.2",
-    "gulp-minify-css": "^1.2.4",
-    "gulp-rename": "^1.2.2",
-    "gulp-sass": "~2.0.4",
-    "gulp-sourcemaps": "^1.6.0",
-    "gulp-uglify": "^1.5.3",
-    "lodash": "~3.10.1",
-    "rename": "^1.0.3"
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
   }
 }
